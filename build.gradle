@@ -24,15 +24,18 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter' // Вместо стартеров для базы данных
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.0' // Добавляем стартер для работы с базой данных
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.6.0'
+    implementation 'mysql:mysql-connector-java:8.0.30' // Добавляем MySQL-коннектор
 
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
+    testImplementation 'mysql:mysql-connector-java:8.0.30'
     testImplementation 'com.codeborne:selenide:6.17.2'
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
     testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.32'
     testImplementation 'io.qameta.allure:allure-selenide:2.20.1'
+
 }
 
 test {
