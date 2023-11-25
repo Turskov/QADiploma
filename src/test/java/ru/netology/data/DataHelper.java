@@ -15,9 +15,9 @@ public class DataHelper {
 
     private static String getCardNumber(String card) {
         if (card.equalsIgnoreCase("approved")) {
-            return "4444 4444 4444 4441";
+            return "7777 7777 7777 7777";
         } else if (card.equalsIgnoreCase("declined")) {
-            return "4444 4444 4444 4442";
+            return "8888 8888 8888 8888";
         }
         else return card;
     }
