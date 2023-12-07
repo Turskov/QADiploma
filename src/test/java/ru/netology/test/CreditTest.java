@@ -1,5 +1,7 @@
 package ru.netology.test;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.data.DataHelper;
@@ -9,9 +11,18 @@ import ru.netology.page.PaymentPage;
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
+
 public class CreditTest {
 
     PaymentPage paymentPage;
+
+    @BeforeAll
+    static void setUpAll() {SelenideLogger.addListener("allure", new AllureSelenide());}
+    @AfterAll
+    static void tearDownAll() {SelenideLogger.removeListener("allure");}
+
 
     @BeforeEach
     void setUp() {
