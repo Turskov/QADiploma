@@ -17,3 +17,6 @@
 5. Для выполнения тестов используйте команду `./gradlew clean test '-Ddb.url=jdbc:mysql://localhost:3306/app'`;
 6. Чтобы открыть отчет в браузере, используйте команду `./gradlew allureServe`;
 7. Для остановки контейнера используйте команду `docker compose down`;
+
+# Report [![Build status](https://ci.appveyor.com/api/projects/status/lk2p029sojkckg1g?svg=true)](https://ci.appveyor.com/project/Turskov/qadiploma)
+![image](https://github.com/Turskov/QADiploma/assets/89296396/8045422b-7828-4e8e-a770-cfce36b891c1)
